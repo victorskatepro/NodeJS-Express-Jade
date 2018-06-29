@@ -1,0 +1,24 @@
+include mixins
+extends layout
+block content
+    .container
+        .jumbotron
+            +banner("Contáctanos","Llamanos","background: url('http://www.tektile.com.ph/wp-content/themes/tektile/images/contact-us-background.jpg')")
+            form(action='confirmation', method='post')
+                h2.text-center
+                    .row
+                        .col-sm-6.form-group
+                            input#name.form-control(name='name', placeholder='Nombres y apellidos', type='text', title='Ingrese sus nombres y apellidos completo', required='')
+                        .col-sm-6.form-group
+                            input#email.form-control(name='email', placeholder='Correo electrónico', type='email', title='Este no parece un usuario de twitter válido', required='')
+                        .col-sm-6.form-group
+                            input#telefono.form-control(name='phone', placeholder='Teléfono', type='tel', pattern='[0-9]{9}', title='Ingrese 9 digitos', required='')
+                        .col-sm-6.form-group
+                            input#f_nacimiento.form-control(name='birthdate', placeholder='Fecha de nacimiento', type='date', required='')
+                        .col-sm-12.form-group
+                            textarea#mensaje.form-control(name='message', placeholder='Mensaje', rows='5', minlength='140', required='')
+                        .col-sm-12.form-group
+                            button#enviar.btn.btn-success.btn-block.pull-right(type='submit') Enviar
+
+        script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+        script( src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')

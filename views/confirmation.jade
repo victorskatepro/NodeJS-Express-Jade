@@ -1,0 +1,17 @@
+include mixins
+extends layout
+block content
+    .container
+        .jumbotron
+            +banner("Contáctanos","Llamanos","background: url('http://www.tektile.com.ph/wp-content/themes/tektile/images/contact-us-background.jpg')")
+            form(action='confirmation', method='post')
+                h2.text-center Muy pronto nos pondremos en contacto
+                ul Datos
+                    li=name
+                    li=email
+                    li=phone
+                    li=birthdate
+                    li=message
+
+        script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+        script( src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
