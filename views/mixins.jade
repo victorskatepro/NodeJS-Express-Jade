@@ -101,22 +101,23 @@ mixin listText
         block
 
 mixin navBarHeader
-    - var productos =[{ "id": "1", "name":"Producto 1", "image": "imagex" }, { "id": "2", "name": "Producto 2", "image": "imagey" }, { "id": "3", "name": "Producto 3", "image": "imagey" }, { "id": "4", "name": "Producto 4", "image": "imagey" } ]
-    +nav("JConsultancy", "dropdown_menu")
-        +nav_item("/", "active") Home
-        +nav_item("/about", "active") About
-        +nav_item_dropdown("#")(label="Productos")
+    - var productos =[{ "id": "1", "name":"Desarrollo web", "image": "imagex" }, { "id": "2", "name": "Desarrollo Mobile", "image": "imagey" }, { "id": "3", "name": "Soluciones tecnologicas", "image": "imagey" }, { "id": "4", "name": "Desarrollo  de Videojuegos", "image": "imagey" } ]
+    +nav("Coffee Team", "dropdown_menu")
+        +nav_item("/", "inactive") Inicio
+        +nav_item("/about", "inactive") Sobre nosotros
+        +nav_item("/contact", "inactive") Contacto
+        +nav_item_dropdown("#")(label="Servicios")
             each product in productos
-                +nav_item("#")=product.name
+                +nav_item("/products")=product.name
             +nav_divider
             +nav_item("/products") Todos los Productos
-        +nav_item("/contact", "active") Contact
+
 
 mixin tableHead
     td
         img
 
 mixin banner(title, subtitle, backgroundUrl)
-    .jumbotron.text-center(style=backgroundUrl)
-        h1(style="font-weight: bold;")=title
-        p=subtitle
+    .jumbotron.text-center(style="background-color:rgba(0, 0, 0, 0.5);")
+        h1(style="font-weight: bold; color:white")=title
+        p(style="color:white")=subtitle

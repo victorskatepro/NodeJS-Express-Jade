@@ -2,8 +2,8 @@ include mixins
 extends layout
 block content
     .container
-        .jumbotron
-            +banner("Contáctanos","Llamanos","background: url('http://www.tektile.com.ph/wp-content/themes/tektile/images/contact-us-background.jpg')")
+        .jumbotron(style="background: url('https://cdn.pixabay.com/photo/2018/05/08/08/42/handshake-3382503_1280.jpg')")
+            +banner("Contáctanos","","background: url('http://www.tektile.com.ph/wp-content/themes/tektile/images/contact-us-background.jpg')")
             form(action='confirmation', method='post')
                 h2.text-center
                     .row
@@ -18,7 +18,7 @@ block content
                         .col-sm-12.form-group
                             textarea#mensaje.form-control(name='message', placeholder='Mensaje', rows='5', minlength='140', required='')
                         .col-sm-12.form-group
-                            button#enviar.btn.btn-success.btn-block.pull-right(type='submit') Enviar
+                            button#enviar.btn.btn-primary.btn-block.pull-right(type='submit') Enviar
 
         script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
         script( src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')

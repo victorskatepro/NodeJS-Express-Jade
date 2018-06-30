@@ -2,10 +2,9 @@ include mixins
 extends layout
 block content
     .container
-        .jumbotron
-            +banner("Nosotros","💻️","background: url('http://www.collab2.co.za/wp-content/uploads/2017/06/contact-us-background.jpg')")
-            h2 Nosotros
-            p Somos una empresa líder en el mercado con amplia experiencia en el área informática.
+        .jumbotron(style="background: url('https://cdn.pixabay.com/photo/2017/05/02/03/41/action-2277292_1280.jpg')")
+            +banner("Nuestro equipo","🤝️","background: url('http://www.collab2.co.za/wp-content/uploads/2017/06/contact-us-background.jpg')")
+            h2(style="color:white") Somos un equipo con el mismo objetivo
 
         script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
         script( src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')

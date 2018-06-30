@@ -20,10 +20,10 @@ router.get('/contact', function(req, res){
 
 router.get('/products', function(req, res){
     res.render('products',
-        {productos: [{ "id": "1", "name":"Desarrollo Móvil", "image": "/images/movil.png" },
+        {productos: [{ "id": "1", "name":"Desarrollo Móvil", "image": "/images/movil.jpg" },
                 { "id": "2", "name": "Desarrollo Web", "image": "/images/web.png" },
-                { "id": "3", "name": "Gestión de Proyectos", "image": "/images/gestion.png" },
-                { "id": "4", "name": "Community Management", "image": "/images/community.png" } ]});
+                { "id": "3", "name": "Desarrollo de videojuegos", "image": "/images/videojuegos.png" },
+                { "id": "4", "name": "Soluciones tecnologicas", "image": "/images/play.jpg" } ]});
 });
 
 router.post('/confirmation', function (req, res) {

@@ -3,15 +3,18 @@ extends layout
 block content
     .container
         .jumbotron
-            +banner("Servicios", "Ofrecemos productos y servicios con calidad", "background: url('https://i.ytimg.com/vi/VmVE_TE9XKo/maxresdefault.jpg')")
+            +banner("Nuestros Servicios", "", "background: url('https://i.ytimg.com/vi/VmVE_TE9XKo/maxresdefault.jpg')")
             #about.container-fluid
                 .row
                     div.container(align="center")
                         .row
                             each product in productos
                                 .col-lg-6.col-md-6.col-sm-6.col-xs-12
-                                    h3=product.name
-                                    img(style="width: 300px; height: 300px" src=product.image alt="")
+                                    div.panel.panel-primary
+                                       div.panel-heading
+                                        h3=product.name
+                                       div.panel-body
+                                        img(style="width: 300px; height: 300px" src=product.image alt="")
 
         script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
         script( src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
